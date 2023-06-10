@@ -9,6 +9,7 @@ def sign_up(request):
         if fm.is_valid():
             messages.success(request,'account created successfully !!!')
             fm.save()
+            fm=sigupform()
     else:
      fm=sigupform()
     return render(request,'enroll/signup.html',{'form':fm})
